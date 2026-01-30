@@ -10,18 +10,16 @@ public class Main {
         String S = String.valueOf(A);
         if(S.length() != N){
             System.out.println("Uzunlik mos emas!");
+            return;
         }
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < N; i++){
-            if(S.charAt(i)=='0'){
-                sb.append('0');
-            }
-            else if(S.charAt(i)=='5'){
-                sb.append('5');
-            }
-            else{
+        for (int i = 0; i < N; i++) {
+            char c = S.charAt(i);
+            if (c == '0' || c == '5' || c == '9') {
+                sb.append(c);
+            } else {
                 sb.append('8');
             }
         }
@@ -30,3 +28,4 @@ public class Main {
 
     }
 }
+
